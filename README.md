@@ -12,13 +12,13 @@ This mitmproxy addon periodically saves HTTP flows into HAR (HTTP Archive) files
 
 ### Prerequisites
 1. save har_dump.py to `~/.mitmproxy/har_dump.py`
-	```bash
+```bash
 mkdir ~/.mitmproxy
 curl -o ~/.mitmproxy/har_dump.py https://raw.githubusercontent.com/thenisvan/mitmproxy-periodicalHarDump/refs/heads/main/har_dump.py
 
-	```
+```
 2. Run mitmproxy inside docker with mounted directory to accomplish persistent certificates and addon load
- ```bash
+```bash
 docker run --rm -it -v ~/.mitmproxy:/home/mitmproxy/.mitmproxy -p 8080:8080 -p 127.0.0.1:8081:8081 mitmproxy/mitmproxy mitmproxy -q -s /home/mitmproxy/.mitmproxy/har_dump.py
 
 ```
@@ -36,15 +36,15 @@ By default, the HAR dump interval is set to **10 seconds**. To change this:
 1. Open the `har_dump.py` script in a text editor. 
 2. Locate the line: [https://github.com/thenisvan/mitmproxy-periodicalHarDump/blob/12f6f91adcc56be53c00db36647c6e4923222586/har_dump.py#L30]
 
-   ```python
-   self.dump_interval_seconds = 10  # Set interval to 10 seconds
-   ```
+```python
+self.dump_interval_seconds = 10  # Set interval to 10 seconds
+```
 
 3. Change `10` to your desired number of seconds.
 
-   ```python
-   self.dump_interval_seconds = 3600  # Set interval to 1 hour
-   ```
+```python
+self.dump_interval_seconds = 3600  # Set interval to 1 hour
+```
 
 ## Output
 
@@ -62,9 +62,9 @@ har_dump_YYYY-MM-DD_HH-MM-SS.har
 
 - **Flow Filtering**: Currently, the addon saves all HTTP flows. If you want to filter which flows are saved, you can modify the `self.filt` attribute with a mitmproxy filter expression.
 
-  ```python
-  self.filt = flowfilter.parse("~u example.com")  # Only save flows to example.com
-  ```
+```python
+self.filt = flowfilter.parse("~u example.com")  # Only save flows to example.com
+```
 
 ## Contributing
 
