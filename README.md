@@ -35,7 +35,8 @@ The addon will automatically:
 By default, the HAR dump interval is set to **10 seconds**. To change this:
 
 1. Open the `har_dump.py` script in a text editor. 
-2. Locate the line: [https://github.com/thenisvan/mitmproxy-periodicalHarDump/blob/12f6f91adcc56be53c00db36647c6e4923222586/har_dump.py#L30]
+2. Locate the line:
+  - https://github.com/thenisvan/mitmproxy-periodicalHarDump/blob/12f6f91adcc56be53c00db36647c6e4923222586/har_dump.py#L30
 
 ```python
 self.dump_interval_seconds = 10  # Set interval to 10 seconds
