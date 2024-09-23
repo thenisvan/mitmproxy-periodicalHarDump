@@ -26,7 +26,8 @@ docker run --rm -it -v ~/.mitmproxy:/home/mitmproxy/.mitmproxy -p 8080:8080 -p 1
 The addon will automatically:
 
 - Capture all HTTP flows passing through mitmproxy.
-- Save the captured flows into a HAR file at regular intervals (edit `har_dump.py:30).[https://github.com/thenisvan/mitmproxy-periodicalHarDump/blob/12f6f91adcc56be53c00db36647c6e4923222586/har_dump.py#L30]
+- Save the captured flows into a HAR file at regular intervals (edit `har_dump.py:30).
+  - https://github.com/thenisvan/mitmproxy-periodicalHarDump/blob/12f6f91adcc56be53c00db36647c6e4923222586/har_dump.py#L30
 - Clear the flows after each dump to prevent duplication.
 
 ### Customizing the Dump Interval
