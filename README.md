@@ -82,7 +82,7 @@ configure your target device with the correct proxy settings. Now start a
 browser on the device, and visit the magic domain [mitm.it](http://mitm.it/). You should see
 something like this:
 
-{{< figure src="/certinstall-webapp.png" class="has-border" >}}
+[{{< figure src="/certinstall-webapp.png" class="has-border" >}}](https://docs.mitmproxy.org/stable/certinstall-webapp.png)
 
 Click on the relevant icon, follow the setup instructions for the platform
 you're on and you are good to go.
